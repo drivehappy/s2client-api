@@ -804,6 +804,7 @@ bool QueryImp::Placement(const AbilityID& ability, const Point2D& target_pos, Ta
     queries.push_back(query);
 
     std::vector<bool> results = Placement(queries);
+    assert(results.size() > 0);
     return results[0];
 }
 
