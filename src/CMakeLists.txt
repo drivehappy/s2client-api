@@ -20,6 +20,9 @@ endforeach()
 # Now include that directory
 include_directories(SYSTEM "${PROJECT_BINARY_DIR}/generated")
 
+# Enable C++ conformance under MSVC
+add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/permissive->)
+
 # Setup MSVC parallelized builds
 add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/MP>)
 

@@ -7,6 +7,8 @@ file(GLOB test_SRC
     "*.cc"
 )
 
+# Enable C++ conformance under MSVC
+
 # Setup MSVC parallelized builds
 add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/MP>)
 
